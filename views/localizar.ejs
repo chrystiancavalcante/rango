@@ -1,8 +1,8 @@
  
 
 <% include elements/header %>
-
-<div id="map" style="height: 300px;"></div>
+<div class="container">
+<div id="map" style="height: 300px;">
     <script>
       function initMap() {
         var initialLocation ={lat: -22.988591, lng: -43.291762};
@@ -31,5 +31,6 @@ marker.addListener('dragend', function(){	document.getElementById('lat').value= 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-LqQZ0ms08QvVXzBJoug42bsdTdafbuk&libraries=places&callback=initMap"
     async defer></script>
-
+</div>
+</div>
 <% include elements/footer %>
