@@ -1,0 +1,35 @@
+ 
+
+<% include elements/header %>
+
+<div id="map" style="height: 300px;"></div>
+    <script>
+      function initMap() {
+        var initialLocation ={lat: -22.988591, lng: -43.291762};
+        
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: initialLocation,
+          zoom: 17
+         
+        });
+      
+        var marker = new google.maps.Marker({
+	position : initialLocation,
+	map : map
+	
+   });
+   
+}
+
+
+marker.addListener('dragend', function(){	document.getElementById('lat').value= marker.position.lat()
+	document.getElementById('lng').value= marker.position.lng()
+	
+});
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-LqQZ0ms08QvVXzBJoug42bsdTdafbuk&libraries=places&callback=initMap"
+    async defer></script>
+
+<% include elements/footer %>
