@@ -46,6 +46,9 @@ app.get('/restaurantes', async(req, res) => //{
 app.get('/localizar', async(req, res) => 
 res.render('localizar'))
 
+app.get('/distance', async(req, res) => 
+res.render('distance'))
+
 app.get('/teste', async(req, res) => 
 res.render('teste'))
 
